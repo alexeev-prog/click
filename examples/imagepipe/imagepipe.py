@@ -1,8 +1,6 @@
 from functools import update_wrapper
 
-from PIL import Image
-from PIL import ImageEnhance
-from PIL import ImageFilter
+from PIL import Image, ImageEnhance, ImageFilter
 
 import click
 

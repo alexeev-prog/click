@@ -5,7 +5,7 @@ import click
 
 @click.group(context_settings={})
 def hello() -> None:
-    pass
+	pass
 
 
 assert_type(hello, click.Group)

@@ -73,52 +73,52 @@ from .utils import open_file as open_file
 
 
 def __getattr__(name: str) -> object:
-    import warnings
+	import warnings
 
-    if name == "BaseCommand":
-        from .core import _BaseCommand
+	if name == "BaseCommand":
+		from .core import _BaseCommand
 
-        warnings.warn(
-            "'BaseCommand' is deprecated and will be removed in Click 9.0. Use"
-            " 'Command' instead.",
-            DeprecationWarning,
-            stacklevel=2,
-        )
-        return _BaseCommand
+		warnings.warn(
+			"'BaseCommand' is deprecated and will be removed in Click 9.0. Use"
+			" 'Command' instead.",
+			DeprecationWarning,
+			stacklevel=2,
+		)
+		return _BaseCommand
 
-    if name == "MultiCommand":
-        from .core import _MultiCommand
+	if name == "MultiCommand":
+		from .core import _MultiCommand
 
-        warnings.warn(
-            "'MultiCommand' is deprecated and will be removed in Click 9.0. Use"
-            " 'Group' instead.",
-            DeprecationWarning,
-            stacklevel=2,
-        )
-        return _MultiCommand
+		warnings.warn(
+			"'MultiCommand' is deprecated and will be removed in Click 9.0. Use"
+			" 'Group' instead.",
+			DeprecationWarning,
+			stacklevel=2,
+		)
+		return _MultiCommand
 
-    if name == "OptionParser":
-        from .parser import _OptionParser
+	if name == "OptionParser":
+		from .parser import _OptionParser
 
-        warnings.warn(
-            "'OptionParser' is deprecated and will be removed in Click 9.0. The"
-            " old parser is available in 'optparse'.",
-            DeprecationWarning,
-            stacklevel=2,
-        )
-        return _OptionParser
+		warnings.warn(
+			"'OptionParser' is deprecated and will be removed in Click 9.0. The"
+			" old parser is available in 'optparse'.",
+			DeprecationWarning,
+			stacklevel=2,
+		)
+		return _OptionParser
 
-    if name == "__version__":
-        import importlib.metadata
-        import warnings
+	if name == "__version__":
+		import importlib.metadata
+		import warnings
 
-        warnings.warn(
-            "The '__version__' attribute is deprecated and will be removed in"
-            " Click 9.1. Use feature detection or"
-            " 'importlib.metadata.version(\"click\")' instead.",
-            DeprecationWarning,
-            stacklevel=2,
-        )
-        return importlib.metadata.version("click")
+		warnings.warn(
+			"The '__version__' attribute is deprecated and will be removed in"
+			" Click 9.1. Use feature detection or"
+			" 'importlib.metadata.version(\"click\")' instead.",
+			DeprecationWarning,
+			stacklevel=2,
+		)
+		return importlib.metadata.version("click")
 
-    raise AttributeError(name)
+	raise AttributeError(name)

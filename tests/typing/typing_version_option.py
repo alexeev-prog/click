@@ -10,7 +10,7 @@ import click
 @click.command()
 @click.version_option("0.1")
 def hello() -> None:
-    click.echo("Hello World!")
+	click.echo("Hello World!")
 
 
 assert_type(hello, click.Command)

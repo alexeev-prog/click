@@ -1,5 +1,4 @@
-from pallets_sphinx_themes import get_version
-from pallets_sphinx_themes import ProjectLink
+from pallets_sphinx_themes import ProjectLink, get_version
 
 # Project --------------------------------------------------------------
 

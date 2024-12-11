@@ -1,6 +1,5 @@
 import click
 
-
 all_colors = (
     "black",
     "red",
